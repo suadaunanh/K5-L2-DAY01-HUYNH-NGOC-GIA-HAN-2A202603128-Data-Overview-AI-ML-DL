@@ -78,7 +78,7 @@ Lab hôm nay chỉ **xem prediction**. Chuỗi dưới đây là vòng đời pr
 
 | Tác vụ | Ground truth trông như thế nào? (đơn vị nhãn) | Lỗi hoặc chỗ khó quyết định bạn thấy trên ảnh/JSON | Annotator làm gì? | Reviewer xem gì? |
 | --- | --- | --- | --- | --- |
-| Phân loại ảnh |  |  |  |  |
+| Phân loại ảnh | Một nhãn cho cả ảnh (hoặc vài nhãn nếu multi-label), ví dụ traffic hoặc bus. Đơn vị nhãn là toàn bộ ảnh | Top-1 cab (~0.51) chiếm ưu thế nhưng không khớp nội dung chính của ảnh là xe buýt. Các lớp còn lại (minibus, police_van, recreational_vehicle, streetcar) đều dưới ~0.2 và là lớp gần nghĩa. Ảnh nhiều đối tượng, có thanh đen letterbox và khói/sương mù, còn top-5 không có lớp traffic hay bus | Chọn nhãn theo quy tắc đã thống nhất (đối tượng chiếm ưu thế hoặc nhãn cảnh). Ảnh nhiều đối tượng thì dùng multi-label hoặc gắn cờ “mơ hồ” | So nhãn với nội dung chính của ảnh, không dựa vào độ tin cậy của mô hình để quyết định đúng/sai. Chú ý các trường hợp mô hình tự tin nhưng sai như ảnh này. |
 | Phát hiện vật thể |  |  |  |  |
 | Instance segmentation |  |  |  |  |
 
